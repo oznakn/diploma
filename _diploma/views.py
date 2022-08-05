@@ -52,4 +52,6 @@ def create_diploma(request):
     with open(pdf_name, "wb") as fp:
         writer.write(fp)
 
-    return FileResponse(open(pdf_name, "rb"), content_type="application/pdf")
+    response = FileResponse(open(pdf_name, "rb"), content_type="application/pdf")
+    response['Content-Disposition'] = 'filename="diploma.pdf"'
+    return response
