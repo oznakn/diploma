@@ -142,3 +142,7 @@ cython_debug/
 
 media/
 static/
+
+/pdftemp/
+/downpdf/
+names.json
